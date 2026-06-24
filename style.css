@@ -229,6 +229,32 @@ ul, ol {
   font-size: 0.95rem;
 }
 
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.project-desc {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .appearance-list li {
   display: flex;
   justify-content: space-between;
