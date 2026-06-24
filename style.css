@@ -42,6 +42,29 @@ header.hero h1 {
   letter-spacing: -0.01em;
 }
 
+.portrait {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+}
+
+header.hero-sub {
+  padding-top: 64px;
+  padding-bottom: 24px;
+}
+
+.back-link {
+  margin: 0 0 24px;
+  font-size: 0.9rem;
+}
+
+.back-link a {
+  color: var(--muted);
+}
+
 .tagline {
   margin: 0;
   color: var(--muted);
@@ -89,9 +112,72 @@ ul, ol {
   list-style: none;
 }
 
-.article-list li {
-  margin-bottom: 10px;
+.article-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article-card {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s;
+}
+
+.article-card:hover {
+  border-color: #ccc;
+}
+
+.article-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.article-title {
+  display: block;
+  font-weight: 600;
   font-size: 1.05rem;
+  margin-bottom: 2px;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+}
+
+.article-card:hover .article-title {
+  text-decoration-color: var(--accent);
+}
+
+.article-date {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.article-preview {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .article-image { width: 64px; height: 64px; }
 }
 
 .blog-links {
@@ -132,6 +218,15 @@ ul, ol {
 .desc {
   margin: 8px 0 0;
   color: var(--text);
+}
+
+.quote {
+  margin: 8px 0 0;
+  padding-left: 14px;
+  border-left: 2px solid #ddd;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
 .appearance-list li {
