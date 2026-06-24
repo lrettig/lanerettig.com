@@ -5,20 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lane Rettig</title>
 <meta name="description" content="Lane Rettig — putting the agent back in user agent.">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <img class="portrait" src="photo.jpg" alt="Lane Rettig">
-  <h1>Lane Rettig</h1>
-  <p class="tagline">Putting the &ldquo;agent&rdquo; back in &ldquo;user agent.&rdquo;</p>
+<nav class="sitenav">
+  <div class="sitenav-inner">
+    <a class="sitenav-mark" href="#top">LR</a>
+    <div class="sitenav-links">
+      <a href="#now">Now</a>
+      <a href="#writing">Writing</a>
+      <a href="#career">Career</a>
+      <a href="#projects">Projects</a>
+      <a href="#appearances">Talks</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-body">
+    <img class="portrait" src="photo.jpg" alt="Lane Rettig">
+    <div>
+      <h1>Lane Rettig</h1>
+      <p class="tagline">Putting the &ldquo;agent&rdquo; back in &ldquo;user agent.&rdquo;</p>
+    </div>
+  </div>
 </header>
 
 <main>
 
   <section id="about">
-    <h2>About</h2>
+    <h2><span class="kicker">About</span></h2>
     <p>
       I believe software developers have a responsibility to build systems that reflect
       their values — open, participatory, resilient, and accountable to the people who use
@@ -29,8 +48,8 @@
     </p>
   </section>
 
-  <section id="now">
-    <h2>Now</h2>
+  <section id="now" class="tinted">
+    <h2><span class="kicker">Now</span></h2>
     <p>
       I run <a href="https://clawford.org" target="_blank" rel="noopener">The Clawford Company</a> (Clawford Labs),
       where my main focus is <a href="https://barelypossible.to" target="_blank" rel="noopener">Barely Possible</a>,
@@ -41,7 +60,7 @@
   </section>
 
   <section id="writing">
-    <h2>Writing</h2>
+    <h2><span class="kicker">Writing</span></h2>
     <p class="section-intro">
       I've written about humanistic software for years across three blogs. A few favorites:
     </p>
@@ -50,7 +69,6 @@
         <img class="article-image" src="assets/article-autonocrats.jpg" alt="">
         <span class="article-body">
           <span class="article-title">Autonocrats &amp; Anthropocrats</span>
-          <span class="article-date">March 4, 2020</span>
           <span class="article-preview">On the tension between automated, rules-based governance and governance that leaves room for human judgment.</span>
         </span>
       </a>
@@ -58,7 +76,6 @@
         <img class="article-image" src="assets/article-human-chain.png" alt="">
         <span class="article-body">
           <span class="article-title">A New Human Chain</span>
-          <span class="article-date">April 7, 2020</span>
           <span class="article-preview">On Spacemesh's approach to building a blockchain around ordinary people and hardware, not specialized miners.</span>
         </span>
       </a>
@@ -66,7 +83,6 @@
         <img class="article-image" src="assets/article-faster-horses.jpg" alt="">
         <span class="article-body">
           <span class="article-title">Faster Horses, Better Software</span>
-          <span class="article-date">August 4, 2020</span>
           <span class="article-preview">On why better blockchain software means designing for how people actually behave, not for an idealized rational user.</span>
         </span>
       </a>
@@ -74,7 +90,6 @@
         <img class="article-image" src="assets/article-software-renaissance.jpg" alt="">
         <span class="article-body">
           <span class="article-title">The Software Renaissance</span>
-          <span class="article-date">February 15, 2026</span>
           <span class="article-preview">On how AI is restoring user control over data and software, after years of rigid, one-size-fits-all apps.</span>
         </span>
       </a>
@@ -87,9 +102,10 @@
   </section>
 
   <section id="career">
-    <h2>Career</h2>
+    <h2><span class="kicker">Career</span></h2>
     <ol class="timeline">
       <li class="timeline-item">
+        <span class="era-tag era-ai">AI</span>
         <span class="role">Founder &amp; CEO</span>
         <span class="org">Clawford Labs</span>
         <span class="dates">2026&ndash;present</span>
@@ -97,6 +113,7 @@
         <p class="desc">AI-native media venture, anchored by <a href="https://barelypossible.to" target="_blank" rel="noopener">Barely Possible</a>, an AI-produced podcast. Also does AI integration consulting for small and medium businesses, and builds in-house tools for knowledge management, memory and retrieval, multi-agent orchestration, and agent-assisted document editing.</p>
       </li>
       <li class="timeline-item">
+        <span class="era-tag era-ai">AI</span>
         <span class="role">VP for Research</span>
         <span class="org"><a href="https://near.foundation" target="_blank" rel="noopener">NEAR Foundation</a></span>
         <span class="dates">2024&ndash;2026</span>
@@ -104,6 +121,7 @@
         <p class="desc">Led a 15-person research and product team designing decentralized governance for the NEAR blockchain, including the <a href="https://www.houseofstake.org" target="_blank" rel="noopener">House of Stake</a> voting platform and an AI-assisted proposal system. Directed early research into AI-assisted and autonomous (&ldquo;swarm&rdquo;) governance models combining human and machine agency. <a href="https://rettig.substack.com/t/near" target="_blank" rel="noopener">My writings about NEAR &rarr;</a></p>
       </li>
       <li class="timeline-item">
+        <span class="era-tag era-crypto">Crypto</span>
         <span class="role">CTO &amp; VP for R&amp;D</span>
         <span class="org">Spacemesh</span>
         <span class="dates">2019&ndash;2024</span>
@@ -111,6 +129,7 @@
         <p class="desc">Led an 18-person research and engineering team building a novel, open-source blockchain protocol from the ground up &mdash; protocol design, consensus mechanism, core software, economic policy, and developer relations. <a href="https://rettig.substack.com/t/spacemesh" target="_blank" rel="noopener">My writings about Spacemesh &rarr;</a></p>
       </li>
       <li class="timeline-item">
+        <span class="era-tag era-crypto">Crypto</span>
         <span class="role">Founder</span>
         <span class="org">Crypto NYC</span>
         <span class="dates">2017&ndash;2025</span>
@@ -118,6 +137,7 @@
         <p class="desc">Founded and ran a non-profit community and co-working space in New York City dedicated to making blockchain and Web3 technology accessible to everyone. No longer active; the organization is now defunct.</p>
       </li>
       <li class="timeline-item">
+        <span class="era-tag era-crypto">Crypto</span>
         <span class="role">Core Developer &amp; Governance Coordinator</span>
         <span class="org">Ethereum Foundation</span>
         <span class="dates">2017&ndash;2019</span>
@@ -125,6 +145,7 @@
         <p class="desc">Contributed to the Ethereum virtual machine and smart contract engine as part of the <a href="https://github.com/ewasm" target="_blank" rel="noopener">Ewasm</a> project (<a href="https://notes.ethereum.org/@ipsilon/about#Ewasm-deprecated" target="_blank" rel="noopener">later deprecated</a>), led global core protocol governance calls, and spoke about Ethereum research and governance at conferences across roughly 20 countries.</p>
       </li>
       <li class="timeline-item">
+        <span class="era-tag era-health">Health</span>
         <span class="role">Co-founder &amp; CTO</span>
         <span class="org">Seratis</span>
         <span class="dates">2013&ndash;2016</span>
@@ -132,6 +153,7 @@
         <p class="desc">Co-founded a healthcare technology startup that used smartphones to let doctors and care teams coordinate, track, and analyze patient care. Responsible for product, technology, financials, and operations. Acquired in 2016.</p>
       </li>
       <li class="timeline-item">
+        <span class="era-tag era-finance">Finance</span>
         <span class="role">Software Developer, Convertible Arbitrage</span>
         <span class="org">D. E. Shaw &amp; Co.</span>
         <span class="dates">2006&ndash;2012</span>
@@ -143,7 +165,7 @@
   </section>
 
   <section id="projects">
-    <h2>Open Source &amp; Engineering</h2>
+    <h2><span class="kicker">Open Source &amp; Engineering</span></h2>
     <p class="section-intro">
       A selection of the codebases I've built or led. The full history is on <a href="https://github.com/lrettig" target="_blank" rel="noopener">GitHub</a>.
     </p>
@@ -168,7 +190,7 @@
   </section>
 
   <section id="education">
-    <h2>Education</h2>
+    <h2><span class="kicker">Education</span></h2>
     <p class="section-intro">
       MBA, The Wharton School, and MA in International Studies, The Lauder Institute, University of Pennsylvania &mdash;
       BA in Computer Science and East Asian Languages &amp; Cultures, UC Berkeley. Studied abroad four times, in the UK, China, and Japan.
@@ -176,7 +198,7 @@
   </section>
 
   <section id="appearances">
-    <h2>Featured Talks &amp; Appearances</h2>
+    <h2><span class="kicker">Featured Talks &amp; Appearances</span></h2>
     <p class="section-intro">
       Spoken on stages and podcasts across four continents about blockchain governance, protocol design, and humanistic, AI-enabled software.
     </p>
@@ -195,7 +217,7 @@
   </section>
 
   <section id="contact">
-    <h2>Get in touch</h2>
+    <h2><span class="kicker">Get in touch</span></h2>
     <p class="contact-links">
       <a href="mailto:lane@clawford.org">Email</a> ·
       <a href="https://x.com/lrettig" target="_blank" rel="noopener">X</a> ·
