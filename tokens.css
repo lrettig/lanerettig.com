@@ -1,0 +1,183 @@
+/* ============================================================
+   Clawford Labs — Colors & Type
+   Source-of-truth tokens for The Clawford Company, dba Clawford Labs.
+   Imported by every UI kit, slide, and prototype in this system.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  color-scheme: light;
+
+  /* ─── Surface & ink ─────────────────────────────── */
+  --bg:         #FCFBF7;   /* paper (canvas)              */
+  --paper:      #FFFDF8;   /* lifted paper (cards, header)*/
+  --paper-2:    #F6F2EA;   /* warm tinted paper (Beacon)  */
+  --ink:        #1A1916;   /* primary text                */
+  --ink-2:      #0F1115;   /* deepest near-black          */
+  --muted:      #6B6860;   /* secondary text              */
+  --muted-2:    #8E8A80;   /* tertiary text               */
+  --line:       #D8D0C3;   /* borders, dividers           */
+  --line-soft:  #ECE6D8;   /* low-contrast hairlines      */
+
+  /* ─── Brand accents ─────────────────────────────── */
+  --signal:        #C44926;   /* SIGNAL — primary accent, coral/orange */
+  --signal-dark:   #8F2E18;   /* hover/active            */
+  --signal-soft:   #F3DDC9;   /* tinted bg / chip        */
+  --signal-warm:   #FF6A00;   /* hotter accent variant   */
+
+  --depth:         #1D4B63;   /* DEPTH — deep teal       */
+  --depth-soft:    #D7E8EE;   /* tinted bg              */
+
+  --focus:         #7B5CF0;   /* FOCUS — violet         */
+  --focus-soft:    #F0EBFB;   /* tinted bg              */
+  --focus-light:   #B780FF;   /* lighter variant        */
+
+  --stone:         #D6D2C9;   /* STONE — neutral tile   */
+
+  /* ─── Semantic status ───────────────────────────── */
+  --success:    #0F6B6D;   /* deep teal-green */
+  --warning:    #A06A1A;   /* amber */
+  --error:      #9B2C2C;   /* deep red */
+  --info:       #155E75;   /* deep teal (Beacon accent) */
+
+  /* ─── Type families ─────────────────────────────── */
+  --font-display: "Instrument Serif", "Lora", Georgia, "Times New Roman", serif;
+  --font-body:    "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:    "DM Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ─── Type scale (semantic) ─────────────────────── */
+  --size-display:    clamp(62px, 11vw, 142px);  /* Wordmark / hero */
+  --size-h1:         clamp(44px, 6vw, 72px);
+  --size-h2:         clamp(32px, 4vw, 52px);
+  --size-h3:         28px;
+  --size-h4:         22px;
+  --size-lede:       clamp(18px, 2vw, 22px);
+  --size-body:       16px;
+  --size-small:      14px;
+  --size-kicker:     12px;   /* mono uppercase eyebrow */
+  --size-mono-data:  13px;
+
+  --leading-display: 0.82;
+  --leading-tight:   1.05;
+  --leading-snug:    1.25;
+  --leading-body:    1.55;
+
+  /* ─── Spacing (4-unit base) ─────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  32px;
+  --space-8:  40px;
+  --space-9:  56px;
+  --space-10: 72px;
+  --space-11: 96px;
+
+  /* ─── Radii ─────────────────────────────────────── */
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius:     8px;     /* default */
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-pill: 999px;
+
+  /* ─── Shadows / elevation ───────────────────────── */
+  --shadow-hairline: 0 1px 0 rgb(26 25 22 / 12%);
+  --shadow-sm:       0 1px 2px rgb(26 25 22 / 6%), 0 0 0 1px rgb(26 25 22 / 4%);
+  --shadow-md:       0 6px 18px rgb(26 25 22 / 8%);
+  --shadow-lg:       0 18px 50px rgb(26 25 22 / 10%);
+  --shadow-press:    inset 0 1px 0 rgb(26 25 22 / 8%);
+
+  /* ─── Editorial newsprint grid (background) ────── */
+  --rule-grid:
+    linear-gradient(90deg, rgb(26 25 22 / 4%) 1px, transparent 1px) 0 0 / 72px 72px,
+    linear-gradient(var(--bg), var(--bg));
+
+  /* ─── Misc ──────────────────────────────────────── */
+  --max-wrap: 1120px;
+  --transition: 160ms cubic-bezier(.2, .7, .3, 1);
+}
+
+/* ============================================================
+   Semantic element styles — opinionated, but easy to opt out of
+   ============================================================ */
+
+.cl-type-display,
+.cl-h1,
+.cl-h2,
+.cl-h3,
+.cl-h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.cl-type-display { font-size: var(--size-display); line-height: var(--leading-display); }
+.cl-h1           { font-size: var(--size-h1);      line-height: var(--leading-tight); }
+.cl-h2           { font-size: var(--size-h2);      line-height: var(--leading-tight); }
+.cl-h3           { font-size: var(--size-h3);      line-height: var(--leading-snug); }
+.cl-h4           { font-size: var(--size-h4);      line-height: var(--leading-snug); }
+
+.cl-lede {
+  font-family: var(--font-body);
+  font-size: var(--size-lede);
+  line-height: 1.35;
+  color: var(--muted);
+  margin: 0;
+  text-wrap: pretty;
+  max-width: 56ch;
+}
+
+.cl-body {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--leading-body);
+  color: var(--ink);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.cl-small {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0;
+}
+
+.cl-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--size-kicker);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--signal-dark);
+  margin: 0;
+}
+
+.cl-mono,
+.cl-data {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono-data);
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.cl-link {
+  color: var(--signal-dark);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+/* ── Italic display (Instrument Serif italic) for editorial pull-quotes ── */
+.cl-italic-display {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
